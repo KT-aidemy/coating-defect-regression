@@ -39,7 +39,7 @@ if train_file is not None:
             st.subheader("モデル評価結果")
             st.write(f"R2: {r2_score(y_train, y_pred):.3f}")
             st.write(f"MAE: {mean_absolute_error(y_train, y_pred):.2f}")
-            st.write(f"RMSE: {mean_squared_error(y_train, y_pred, squared=False):.2f}")
+            st.write(f"RMSE: {np.sqrt(mean_squared_error(y_train, y_pred)):.2f}")
 
             # 散布図（任意の特徴量 vs Butu）
             st.subheader("特徴量とButuの関係（散布図＋回帰線）")
